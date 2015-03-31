@@ -1,3 +1,6 @@
+# less-brunch 1.8.2 (31 March 2015)
+* Added includePaths to options, for extra paths to search for includes
+
 # less-brunch 1.8.1 (12 January 2015)
 * Fix getDependencies bug
 

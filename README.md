@@ -13,6 +13,8 @@ Print source-file references in output by setting `dumpLineNumbers` in your
   plugins:
     less:
       dumpLineNumbers: 'comments' # other options: 'mediaquery', 'all'
+      # optional: Other paths to search for includes.
+      includePaths: [ 'path/to/other/includes-dir', 'another/dir-path', 'wheeeeeeee' ]
 ```
 
 ## License

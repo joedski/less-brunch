@@ -19,9 +19,14 @@ LESSCompiler.prototype.extension = 'less';
 LESSCompiler.prototype.compile = function(params, callback) {
   var data = params.data;
   var path = params.path;
+  var includePaths = [this.rootPath, sysPath.dirname(path)];
+
+  if (this.config.includePaths) {
+    includePaths = includePaths.concat(this.config.includePaths);
+  }
 
   less.render(data, {
-    paths: [this.rootPath, sysPath.dirname(path)],
+    paths: includePaths,
     filename: path,
     dumpLineNumbers: !this.optimize && this.config.dumpLineNumbers
   }, function(error, output) {
